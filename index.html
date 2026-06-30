@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KKI STARS — Luxury Web Design &amp; Development | Premium Websites That Convert</title>
+<meta name="description" content="KKI STARS designs and develops luxury, high-converting websites — custom code, WordPress, business portfolios and landing pages built to win high-paying clients." />
+<meta name="keywords" content="luxury web design, web developer, custom website, WordPress developer, landing page, portfolio website, Fiverr web developer, KKI STARS" />
+<meta name="author" content="KKI STARS" />
+<meta name="theme-color" content="#0A0A0A" />
+<link rel="canonical" href="./index.html" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A0A0A'/%3E%3Ctext x='16' y='24' font-size='22' text-anchor='middle' fill='%23C9A24B'%3E%E2%98%85%3C/text%3E%3C/svg%3E" />
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="KKI STARS — Luxury Web Design &amp; Development" />
+<meta property="og:description" content="Premium, high-converting websites engineered to impress and convert high-paying clients." />
+<meta property="og:site_name" content="KKI STARS" />
+<meta property="og:image" content="kaleem.jpg.jpeg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- JSON-LD structured data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "KKI STARS",
+  "description": "Luxury web design and development studio building premium, high-converting websites.",
+  "areaServed": "Worldwide",
+  "serviceType": ["Web Design", "Web Development", "WordPress Development", "Landing Page Design"],
+  "founder": { "@type": "Person", "name": "Kaleem Ullah" },
+  "priceRange": "$$$"
+}
+</script>
+
+<style>
+/* ============ DESIGN TOKENS ============ */
+:root{
+  --black:#0A0A0A;
+  --charcoal:#121212;
+  --panel:#171717;
+  --panel-2:#1C1C1C;
+  --line:rgba(201,162,75,.16);
+  --line-soft:rgba(255,255,255,.08);
+  --ivory:#F4F1EA;
+  --muted:#A7A29A;
+  --muted-2:#79756E;
+  --gold:#C9A24B;
+  --gold-2:#E7C879;
+  --gold-soft:rgba(201,162,75,.12);
+  --grad-gold:linear-gradient(135deg,#E7C879 0%,#C9A24B 45%,#9C7A2E 100%);
+  --shadow:0 30px 80px -30px rgba(0,0,0,.85);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --maxw:1240px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--black);
+  color:var(--ivory);
+  font-family:'Inter',system-ui,sans-serif;
+  font-weight:400;
+  line-height:1.65;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  letter-spacing:.1px;
+}
+body.no-scroll{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--gold);color:#000}
+
+h1,h2,h3,h4,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:.4px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.gold-text{
+  background:var(--grad-gold);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+.eyebrow{
+  font-family:'Inter';font-size:12.5px;font-weight:600;letter-spacing:3.4px;
+  text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:12px;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
+
+/* ============ BACKGROUND TEXTURE ============ */
+.bg-grain{
+  position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.glow{position:fixed;border-radius:50%;filter:blur(120px);z-index:0;pointer-events:none}
+.glow.a{width:520px;height:520px;background:rgba(201,162,75,.10);top:-180px;right:-120px}
+.glow.b{width:480px;height:480px;background:rgba(201,162,75,.06);bottom:10%;left:-200px}
+
+/* ============ CURSOR ============ */
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:difference;transform:translate(-50%,-50%)}
+.cursor-dot{width:6px;height:6px;background:var(--gold-2)}
+.cursor-ring{width:38px;height:38px;border:1px solid rgba(231,200,121,.6);transition:transform .18s var(--ease),width .2s,height .2s,opacity .2s}
+.cursor-ring.hover{width:64px;height:64px;background:rgba(231,200,121,.07)}
+@media (hover:none){.cursor-dot,.cursor-ring{display:none}}
+
+/* ============ HEADER ============ */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:22px 0;transition:padding .4s var(--ease),background .4s var(--ease),border-color .4s;
+  border-bottom:1px solid transparent;
+}
+header.scrolled{
+  padding:14px 0;background:rgba(10,10,10,.72);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line-soft);
+}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Cormorant Garamond';font-size:23px;font-weight:700;letter-spacing:2px}
+.brand .mark{
+  width:38px;height:38px;border:1px solid var(--gold);border-radius:50%;
+  display:grid;place-items:center;font-size:15px;color:var(--gold);position:relative;
+}
+.brand .mark::after{content:"";position:absolute;inset:5px;border:1px solid rgba(201,162,75,.3);border-radius:50%}
+.brand b{color:var(--ivory)}.brand span{color:var(--gold)}
+.menu{display:flex;align-items:center;gap:38px}
+.menu a{font-size:14px;color:var(--muted);font-weight:500;position:relative;transition:color .3s}
+.menu a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:width .35s var(--ease)}
+.menu a:hover{color:var(--ivory)}.menu a:hover::after{width:100%}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;font-family:'Inter';font-weight:600;font-size:14px;
+  padding:13px 26px;border-radius:50px;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s,background .3s;border:none;
+}
+.btn-gold{background:var(--grad-gold);color:#1a1407;box-shadow:0 10px 30px -10px rgba(201,162,75,.6)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 18px 40px -12px rgba(201,162,75,.75)}
+.btn-ghost{background:transparent;color:var(--ivory);border:1px solid var(--line);}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+.btn .arr{transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translate(4px,-4px)}
+.btn.soon{background:#181818;color:var(--gold);border:1px dashed rgba(201,162,75,.5);box-shadow:none;cursor:default}
+.btn.soon:hover{transform:none;box-shadow:none}
+.soon-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold);display:inline-block;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2px;background:var(--ivory);transition:.3s}
+
+/* mobile menu */
+.mobile-menu{position:fixed;inset:0;background:rgba(10,10,10,.97);backdrop-filter:blur(20px);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;opacity:0;pointer-events:none;transition:opacity .4s}
+.mobile-menu.open{opacity:1;pointer-events:auto}
+.mobile-menu a{font-family:'Cormorant Garamond';font-size:34px;color:var(--ivory)}
+.mobile-menu a:hover{color:var(--gold)}
+
+/* ============ HERO ============ */
+.hero{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;padding:140px 0 90px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(48px,7vw,92px);margin:24px 0 0;letter-spacing:.5px}
+.hero h1 .line{display:block;overflow:hidden}
+.hero h1 .line i{display:block;font-style:normal;transform:translateY(110%);transition:transform 1s var(--ease)}
+.hero.in h1 .line i{transform:translateY(0)}
+.hero h1 .line:nth-child(2) i{transition-delay:.12s}
+.hero h1 .line:nth-child(3) i{transition-delay:.24s}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:520px;margin:30px 0 38px;font-weight:300}
+.hero .cta-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.hero .note{font-size:13px;color:var(--muted-2);margin-top:26px;display:flex;align-items:center;gap:10px}
+.hero .note .stars{color:var(--gold);letter-spacing:2px}
+
+/* hero visual card */
+.hero-card{
+  position:relative;border:1px solid var(--line);border-radius:22px;padding:30px;
+  background:linear-gradient(160deg,var(--panel) 0%,var(--charcoal) 100%);
+  box-shadow:var(--shadow);overflow:hidden;
+}
+.hero-card::before{content:"";position:absolute;top:-1px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.hc-dots{display:flex;gap:7px}.hc-dots i{width:11px;height:11px;border-radius:50%;background:#2a2a2a;display:block}
+.hc-dots i:first-child{background:#3a3a3a}
+.hc-badge{font-size:11px;letter-spacing:1.5px;color:var(--gold);border:1px solid var(--line);padding:5px 12px;border-radius:30px;text-transform:uppercase}
+.hc-title{font-family:'Cormorant Garamond';font-size:27px;margin-bottom:6px}
+.hc-sub{font-size:13px;color:var(--muted);margin-bottom:24px}
+.hc-bar{height:8px;border-radius:8px;background:#222;overflow:hidden;margin-bottom:14px}
+.hc-bar span{display:block;height:100%;background:var(--grad-gold);width:0;border-radius:8px;transition:width 1.6s var(--ease)}
+.hc-row{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-bottom:8px}
+.hc-metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.hc-metric{background:var(--panel-2);border:1px solid var(--line-soft);border-radius:14px;padding:16px}
+.hc-metric b{font-family:'Cormorant Garamond';font-size:30px;color:var(--gold-2);display:block;line-height:1}
+.hc-metric small{font-size:11px;color:var(--muted);letter-spacing:.5px}
+.float-tag{position:absolute;background:rgba(20,20,20,.9);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:12px;display:flex;align-items:center;gap:8px;backdrop-filter:blur(6px);animation:floaty 4s ease-in-out infinite}
+.float-tag .dot{width:8px;height:8px;border-radius:50%;background:#5fd07a;box-shadow:0 0 10px #5fd07a}
+.float-tag.t1{top:30px;right:-16px;animation-delay:.2s}
+.float-tag.t2{bottom:34px;left:-20px;animation-delay:1.1s}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* ============ MARQUEE / TRUST ============ */
+.trust{position:relative;z-index:1;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:26px 0;background:rgba(18,18,18,.4)}
+.marquee{display:flex;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee-track{display:flex;gap:60px;white-space:nowrap;animation:scroll 26s linear infinite;padding-right:60px}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{font-family:'Cormorant Garamond';font-size:22px;color:var(--muted-2);letter-spacing:1px;display:flex;align-items:center;gap:14px}
+.marquee-track span::after{content:"✦";color:var(--gold);font-size:12px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ============ SECTION COMMON ============ */
+section.block{position:relative;z-index:1;padding:120px 0}
+.sec-head{max-width:680px;margin-bottom:64px}
+.sec-head h2{font-size:clamp(36px,5vw,60px);margin:18px 0 0}
+.sec-head p{color:var(--muted);font-size:17px;margin-top:18px;font-weight:300}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+.center .eyebrow{justify-content:center}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}.reveal.d4{transition-delay:.4s}
+
+/* ============ SERVICES ============ */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc{
+  position:relative;border:1px solid var(--line-soft);border-radius:20px;padding:38px 32px;
+  background:linear-gradient(170deg,var(--panel) 0%,rgba(18,18,18,.4) 100%);
+  transition:transform .5s var(--ease),border-color .5s,background .5s;overflow:hidden;
+}
+.svc::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),var(--gold-soft),transparent 60%);opacity:0;transition:opacity .5s}
+.svc:hover{transform:translateY(-8px);border-color:var(--line)}
+.svc:hover::before{opacity:1}
+.svc .num{font-family:'Cormorant Garamond';font-size:14px;color:var(--gold);letter-spacing:2px;margin-bottom:24px}
+.svc .ico{width:56px;height:56px;border-radius:14px;border:1px solid var(--line);display:grid;place-items:center;margin-bottom:24px;background:var(--panel-2);position:relative;z-index:1}
+.svc .ico svg{width:26px;height:26px;stroke:var(--gold-2)}
+.svc h3{font-size:26px;margin-bottom:12px;position:relative;z-index:1}
+.svc p{font-size:14.5px;color:var(--muted);position:relative;z-index:1;font-weight:300}
+.svc ul{list-style:none;margin-top:20px;position:relative;z-index:1}
+.svc ul li{font-size:13.5px;color:var(--muted);padding:7px 0;border-top:1px solid var(--line-soft);display:flex;align-items:center;gap:10px}
+.svc ul li::before{content:"✦";color:var(--gold);font-size:9px}
+
+/* ============ PORTFOLIO ============ */
+.folio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.folio{
+  position:relative;border:1px solid var(--line-soft);border-radius:20px;overflow:hidden;
+  background:var(--panel);cursor:pointer;transition:transform .55s var(--ease),border-color .55s;
+}
+.folio:hover{transform:translateY(-6px);border-color:var(--line)}
+.folio .thumb{aspect-ratio:16/10;position:relative;overflow:hidden;display:grid;place-items:center}
+.folio .thumb .mock{position:absolute;inset:0;transition:transform .8s var(--ease)}
+.folio:hover .thumb .mock{transform:scale(1.05)}
+.folio .meta{padding:24px 26px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.folio .meta h3{font-size:23px;margin-bottom:4px}
+.folio .meta .cat{font-size:12px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase}
+.folio .tag-real{position:absolute;top:16px;left:16px;z-index:3;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;background:var(--grad-gold);color:#1a1407;font-weight:700;padding:5px 11px;border-radius:30px}
+.folio .tag-demo{position:absolute;top:16px;left:16px;z-index:3;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;background:rgba(20,20,20,.85);color:var(--muted);border:1px solid var(--line);padding:5px 11px;border-radius:30px}
+.folio .view{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0;transition:background .3s,transform .3s}
+.folio:hover .view{background:var(--gold);transform:rotate(45deg)}
+.folio:hover .view svg{stroke:#000}
+.folio .view svg{width:18px;height:18px;stroke:var(--gold)}
+
+/* ===== CASE STUDY (featured real project) ===== */
+.case{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center;border:1px solid var(--line);border-radius:24px;padding:34px;background:linear-gradient(160deg,var(--panel),rgba(18,18,18,.4));box-shadow:var(--shadow);position:relative;overflow:hidden}
+.case::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.case-badge{position:absolute;top:24px;right:24px;font-size:10px;letter-spacing:1.6px;text-transform:uppercase;background:var(--grad-gold);color:#1a1407;font-weight:700;padding:6px 13px;border-radius:30px;z-index:5}
+.browser{border:1px solid var(--line-soft);border-radius:14px;overflow:hidden;background:#0d0d0d;box-shadow:0 24px 60px -24px rgba(0,0,0,.85)}
+.browser-bar{display:flex;align-items:center;gap:8px;padding:11px 14px;background:#161616;border-bottom:1px solid var(--line-soft)}
+.browser-bar i{width:11px;height:11px;border-radius:50%;background:#2c2c2c;display:block}
+.browser-url{flex:1;margin-left:10px;background:#0d0d0d;border:1px solid var(--line-soft);border-radius:20px;font-size:11px;color:var(--muted);padding:6px 14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.browser-frame{position:relative;aspect-ratio:16/11;overflow:hidden;background:#0d0d0d}
+.browser-frame iframe{position:absolute;top:0;left:0;width:200%;height:200%;transform:scale(.5);transform-origin:top left;border:0;pointer-events:none}
+.browser-frame .livedot{position:absolute;top:12px;right:12px;z-index:3;font-size:10px;color:var(--ivory);background:rgba(15,15,15,.85);border:1px solid var(--line);border-radius:20px;padding:4px 11px;display:flex;align-items:center;gap:7px;backdrop-filter:blur(6px)}
+.browser-frame .livedot b{width:7px;height:7px;border-radius:50%;background:#5fd07a;box-shadow:0 0 8px #5fd07a;display:block}
+.case-body .cat{font-size:12px;color:var(--gold);letter-spacing:2px;text-transform:uppercase}
+.case-body h3{font-size:clamp(28px,3.4vw,42px);margin:12px 0 14px}
+.case-body .intro{font-size:15px;color:var(--muted);font-weight:300;margin-bottom:26px}
+.cs-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px;margin-bottom:24px}
+.cs-block small{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:7px}
+.cs-block p{font-size:13.5px;color:var(--ivory);font-weight:300;line-height:1.55}
+.cs-tech{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.cs-tech span{font-size:12px;color:var(--muted);border:1px solid var(--line-soft);border-radius:20px;padding:6px 13px}
+.cs-cta{display:flex;gap:14px;flex-wrap:wrap}
+.concept-label{font-family:'Cormorant Garamond';font-size:23px;color:var(--muted);margin:64px 0 26px;display:flex;align-items:center;gap:18px}
+.concept-label::after{content:"";flex:1;height:1px;background:var(--line-soft)}
+
+/* ===== ABOUT ===== */
+.about{display:grid;grid-template-columns:.82fr 1.18fr;gap:60px;align-items:center}
+.about-photo{position:relative;border:1px solid var(--line);border-radius:24px;padding:14px;background:linear-gradient(160deg,var(--panel),var(--charcoal));box-shadow:var(--shadow)}
+.about-photo::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.about-photo .ph{aspect-ratio:3/4;border-radius:16px;overflow:hidden;background:radial-gradient(circle at 50% 35%,#1d1d1d,#0c0c0c);position:relative;display:grid;place-items:center}
+.about-photo .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.about-photo .ph .fallback{text-align:center;color:var(--gold);padding:20px}
+.about-photo .ph .fallback .st{font-size:64px;line-height:1}
+.about-photo .ph .fallback .nm{font-family:'Cormorant Garamond';font-size:28px;letter-spacing:3px;color:var(--ivory);margin-top:8px}
+.about-photo .ph .fallback small{display:block;color:var(--muted-2);font-size:12px;margin-top:10px;font-family:'Inter'}
+.about-badge{position:absolute;background:rgba(18,18,18,.94);border:1px solid var(--line);border-radius:14px;padding:12px 17px;backdrop-filter:blur(8px);box-shadow:0 14px 34px -14px rgba(0,0,0,.8);z-index:3}
+.about-badge.b1{bottom:40px;left:-24px;animation:floaty 4.5s ease-in-out infinite}
+.about-badge.b2{top:40px;right:-22px;animation:floaty 4s ease-in-out infinite .6s}
+.about-badge b{font-family:'Cormorant Garamond';font-size:24px;color:var(--gold-2);display:block;line-height:1}
+.about-badge small{font-size:11px;color:var(--muted);letter-spacing:.5px}
+.about-body h2{font-size:clamp(34px,4.5vw,56px);margin:18px 0 22px}
+.about-body p{color:var(--muted);font-weight:300;font-size:16px;margin-bottom:18px;max-width:580px}
+.about-points{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0 30px;max-width:520px}
+.about-points span{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--ivory)}
+.about-points span::before{content:"✦";color:var(--gold);font-size:11px}
+.sig{font-family:'Cormorant Garamond';font-size:32px;font-style:italic;color:var(--ivory);margin-top:6px}
+.sig small{display:block;font-family:'Inter';font-style:normal;font-size:12px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-top:4px}
+
+/* ============ STATS ============ */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center;border:1px solid var(--line);border-radius:22px;padding:54px 30px;background:linear-gradient(160deg,var(--panel),rgba(18,18,18,.3))}
+.stat b{font-family:'Cormorant Garamond';font-size:clamp(44px,5vw,64px);color:var(--gold-2);display:block;line-height:1}
+.stat small{font-size:13px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.stat-div{position:relative}
+.stat-div:not(:last-child)::after{content:"";position:absolute;right:-15px;top:15%;height:70%;width:1px;background:var(--line-soft)}
+
+/* ============ PROCESS ============ */
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.step{padding:34px 26px;border-left:1px solid var(--line-soft);position:relative;transition:background .4s}
+.step:first-child{border-left:none}
+.step:hover{background:rgba(201,162,75,.03)}
+.step .pn{font-family:'Cormorant Garamond';font-size:54px;color:transparent;-webkit-text-stroke:1px var(--gold);opacity:.55;margin-bottom:18px;line-height:1}
+.step:hover .pn{opacity:1;color:var(--gold-soft)}
+.step h3{font-size:22px;margin-bottom:10px}
+.step p{font-size:14px;color:var(--muted);font-weight:300}
+
+/* ============ SKILLS ============ */
+.skills-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.skill{margin-bottom:26px}
+.skill-top{display:flex;justify-content:space-between;font-size:14px;margin-bottom:10px}
+.skill-top span:last-child{color:var(--gold)}
+.skill-bar{height:6px;background:#1d1d1d;border-radius:6px;overflow:hidden}
+.skill-bar i{display:block;height:100%;width:0;background:var(--grad-gold);border-radius:6px;transition:width 1.4s var(--ease)}
+.tech-cloud{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.chip{font-size:13px;color:var(--muted);border:1px solid var(--line-soft);border-radius:30px;padding:9px 18px;transition:.3s}
+.chip:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+
+/* ============ TESTIMONIALS ============ */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testi{border:1px solid var(--line-soft);border-radius:20px;padding:34px 30px;background:var(--panel);transition:transform .5s var(--ease),border-color .5s;position:relative}
+.testi:hover{transform:translateY(-6px);border-color:var(--line)}
+.testi .q{font-family:'Cormorant Garamond';font-size:60px;color:var(--gold);opacity:.25;line-height:.6;height:26px}
+.testi .stars{color:var(--gold);letter-spacing:3px;font-size:14px;margin:14px 0}
+.testi p{font-size:15px;color:var(--ivory);font-weight:300;margin-bottom:24px}
+.testi .who{display:flex;align-items:center;gap:14px;border-top:1px solid var(--line-soft);padding-top:20px}
+.testi .av{width:46px;height:46px;border-radius:50%;background:var(--grad-gold);display:grid;place-items:center;color:#1a1407;font-weight:700;font-family:'Cormorant Garamond';font-size:20px}
+.testi .who b{font-size:15px;display:block}
+.testi .who small{font-size:12.5px;color:var(--muted)}
+
+/* ============ CTA ============ */
+.cta-band{position:relative;z-index:1;text-align:center;padding:110px 0}
+.cta-inner{border:1px solid var(--line);border-radius:28px;padding:70px 40px;background:radial-gradient(800px circle at 50% 0%,var(--gold-soft),transparent 55%),linear-gradient(160deg,var(--panel),var(--charcoal));position:relative;overflow:hidden}
+.cta-inner::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.cta-band h2{font-size:clamp(40px,6vw,72px);margin:18px auto 0;max-width:900px}
+.cta-band p{color:var(--muted);font-size:18px;max-width:560px;margin:22px auto 38px;font-weight:300}
+.cta-band .cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ============ CONTACT ============ */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px}
+.contact-info h2{font-size:clamp(36px,5vw,56px);margin:18px 0 22px}
+.contact-info p{color:var(--muted);font-weight:300;margin-bottom:34px;max-width:420px}
+.ci-item{display:flex;align-items:center;gap:18px;padding:18px 0;border-top:1px solid var(--line-soft)}
+.ci-item .ico{width:46px;height:46px;border-radius:12px;border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0}
+.ci-item .ico svg{width:20px;height:20px;stroke:var(--gold)}
+.ci-item small{font-size:12px;color:var(--muted-2);letter-spacing:1px;text-transform:uppercase;display:block}
+.ci-item b{font-size:16px;font-weight:500}
+form{border:1px solid var(--line-soft);border-radius:22px;padding:40px;background:var(--panel)}
+.field{margin-bottom:22px}
+.field label{font-size:12.5px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:10px}
+.field input,.field textarea,.field select{
+  width:100%;background:var(--panel-2);border:1px solid var(--line-soft);border-radius:12px;
+  padding:15px 16px;color:var(--ivory);font-family:'Inter';font-size:15px;transition:border-color .3s,background .3s;
+}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold);background:#1f1f1f}
+.field textarea{resize:vertical;min-height:120px}
+.field select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23C9A24B' stroke-width='2'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+form .btn-gold{width:100%;justify-content:center;padding:16px}
+.form-msg{font-size:13px;color:var(--gold);margin-top:14px;text-align:center;min-height:18px}
+
+/* ============ FOOTER ============ */
+footer{position:relative;z-index:1;border-top:1px solid var(--line-soft);padding:60px 0 34px;margin-top:40px}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:30px;padding-bottom:40px;border-bottom:1px solid var(--line-soft)}
+.foot-brand{max-width:320px}
+.foot-brand p{color:var(--muted);font-size:14px;margin-top:16px;font-weight:300}
+.foot-cols{display:flex;gap:70px;flex-wrap:wrap}
+.foot-col h4{font-family:'Inter';font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.foot-col a{display:block;font-size:14px;color:var(--muted);padding:6px 0;transition:color .3s}
+.foot-col a:hover{color:var(--ivory)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;flex-wrap:wrap;gap:14px}
+.foot-bottom small{color:var(--muted-2);font-size:13px}
+.socials{display:flex;gap:12px}
+.socials a{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-soft);display:grid;place-items:center;transition:.3s}
+.socials a:hover{border-color:var(--gold);transform:translateY(-3px)}
+.socials a svg{width:17px;height:17px;stroke:var(--muted)}
+.socials a:hover svg{stroke:var(--gold)}
+
+/* scroll progress */
+.progress{position:fixed;top:0;left:0;height:2px;background:var(--grad-gold);z-index:1001;width:0}
+
+/* back to top */
+.totop{position:fixed;right:26px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--panel);border:1px solid var(--line);display:grid;place-items:center;cursor:pointer;z-index:900;opacity:0;transform:translateY(20px);transition:.4s}
+.totop.show{opacity:1;transform:none}
+.totop svg{width:20px;height:20px;stroke:var(--gold)}
+.totop:hover{background:var(--gold)}.totop:hover svg{stroke:#000}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero-card{max-width:440px}
+  .services-grid{grid-template-columns:1fr}
+  .folio-grid{grid-template-columns:1fr}
+  .case{grid-template-columns:1fr;gap:32px;padding:24px}
+  .about{grid-template-columns:1fr;gap:46px;max-width:460px;margin:0 auto}
+  .about-badge.b1{left:14px}.about-badge.b2{right:14px}
+  .stats{grid-template-columns:1fr 1fr;gap:40px 20px}
+  .stat-div::after{display:none}
+  .process{grid-template-columns:1fr 1fr}
+  .step{border-left:none;border-top:1px solid var(--line-soft)}
+  .skills-wrap{grid-template-columns:1fr;gap:40px}
+  .testi-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+}
+@media (max-width:680px){
+  .menu{display:none}.burger{display:flex}
+  #navCta{display:none}
+  section.block{padding:84px 0}
+  .stats{grid-template-columns:1fr 1fr}
+  .process{grid-template-columns:1fr}
+  .cs-grid{grid-template-columns:1fr}
+  form{padding:28px}
+  .wrap{padding:0 20px}
+  .foot-cols{gap:40px}
+  .hero h1{font-size:clamp(40px,11vw,60px)}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.hero h1 .line i{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-grain"></div>
+<div class="glow a"></div>
+<div class="glow b"></div>
+<div class="progress" id="progress"></div>
+<div class="cursor-dot" id="cdot"></div>
+<div class="cursor-ring" id="cring"></div>
+
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#home" class="brand" aria-label="KKI STARS home"><span class="mark">★</span><b>KKI</b>&nbsp;<span>STARS</span></a>
+    <nav class="menu">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#fiverr" class="btn btn-gold" id="navCta" data-cta="fiverr" data-cursor>Hire on Fiverr <span class="arr">↗</span></a>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services">Services</a>
+  <a href="#about">About</a>
+  <a href="#work">Work</a>
+  <a href="#process">Process</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a href="#fiverr" class="gold-text" data-cta="fiverr-text">Hire on Fiverr ↗</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Premium Web Studio · Luxury Design &amp; Development</span>
+      <h1>
+        <span class="line"><i>Premium websites</i></span>
+        <span class="line"><i>engineered to</i></span>
+        <span class="line"><i class="gold-text">convert &amp; impress.</i></span>
+      </h1>
+      <p class="lead reveal d1">KKI STARS is a premium web studio crafting high-end, blazing-fast websites for brands that refuse to look ordinary — custom code, WordPress, and landing pages engineered to win high-paying clients.</p>
+      <div class="cta-row reveal d2">
+        <a href="#fiverr" class="btn btn-gold" data-cta="fiverr" data-cursor>Hire Me on Fiverr <span class="arr">↗</span></a>
+        <a href="#work" class="btn btn-ghost" data-cursor>View Work</a>
+      </div>
+      <div class="note reveal d3"><span class="stars">★★★★★</span> Trusted by founders &amp; brands worldwide · 5.0 average rating</div>
+    </div>
+
+    <div class="hero-card reveal d2" data-cursor>
+      <span class="float-tag t1"><span class="dot"></span> 100/100 Performance</span>
+      <span class="float-tag t2">⚡ Loads in 0.9s</span>
+      <div class="hc-top">
+        <div class="hc-dots"><i></i><i></i><i></i></div>
+        <span class="hc-badge">Sample Build</span>
+      </div>
+      <div class="hc-title">Conversion-First Design</div>
+      <div class="hc-sub">How a KKI STARS build performs · sample metrics</div>
+      <div class="hc-row"><span>Conversion rate</span><span class="gold-text">+184%</span></div>
+      <div class="hc-bar"><span data-bar="92"></span></div>
+      <div class="hc-row"><span>Page speed score</span><span class="gold-text">100/100</span></div>
+      <div class="hc-bar"><span data-bar="100"></span></div>
+      <div class="hc-metrics">
+        <div class="hc-metric"><b data-count="6">0</b><small>Days delivery</small></div>
+        <div class="hc-metric"><b data-count="184" data-suffix="%">0</b><small>More leads</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST MARQUEE ============ -->
+<div class="trust">
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Custom Code</span><span>WordPress</span><span>Landing Pages</span><span>UI / UX Design</span><span>SEO Optimized</span><span>Responsive</span><span>Conversion Focused</span><span>Premium Support</span>
+      <span>Custom Code</span><span>WordPress</span><span>Landing Pages</span><span>UI / UX Design</span><span>SEO Optimized</span><span>Responsive</span><span>Conversion Focused</span><span>Premium Support</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What We Build</span>
+      <h2>Services crafted for <span class="gold-text">premium results</span></h2>
+      <p>Every project is engineered around one goal — making your brand look world-class and turning visitors into paying clients.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc reveal d1">
+        <div class="num">01</div>
+        <div class="ico"><svg fill="none" stroke-width="1.6" viewBox="0 0 24 24"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg></div>
+        <h3>Custom Code Websites</h3>
+        <p>Hand-coded HTML, CSS &amp; JavaScript builds — pixel-perfect, lightning fast, and unique to your brand. No bloated templates.</p>
+        <ul><li>Bespoke design &amp; animation</li><li>100/100 performance</li><li>Fully responsive</li></ul>
+      </div>
+      <div class="svc reveal d2">
+        <div class="num">02</div>
+        <div class="ico"><svg fill="none" stroke-width="1.6" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 18v3M16 18v3M6 21h12"/></svg></div>
+        <h3>Business &amp; Portfolio Sites</h3>
+        <p>Elegant, trust-building websites for companies, agencies and professionals who need to look established and credible.</p>
+        <ul><li>Strong visual hierarchy</li><li>Brand storytelling</li><li>CMS so you can edit easily</li></ul>
+      </div>
+      <div class="svc reveal d3">
+        <div class="num">03</div>
+        <div class="ico"><svg fill="none" stroke-width="1.6" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+        <h3>High-Converting Landing Pages</h3>
+        <p>Sales pages &amp; funnels engineered with CRO psychology to turn ad traffic into leads, bookings and revenue.</p>
+        <ul><li>Conversion-first layout</li><li>A/B-ready structure</li><li>Persuasive copy guidance</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="block" id="about">
+  <div class="wrap about">
+    <div class="about-photo reveal">
+      <span class="about-badge b1"><b>5.0★</b><small>Client Rating</small></span>
+      <span class="about-badge b2"><b>120+</b><small>Projects</small></span>
+      <div class="ph">
+        <img src="kaleem.jpg.jpeg" alt="Kaleem Ullah — Founder of KKI STARS" loading="lazy"
+             data-srcs="kaleem.jpg,kaleem.jpeg,kaleem.png,profile.jpg,team.png,team.jpg"
+             onerror="(function(i){var s=(i.getAttribute('data-srcs')||'').split(',').filter(Boolean);var n=s.shift();i.setAttribute('data-srcs',s.join(','));if(n){i.src=n;}else{i.onerror=null;i.style.display='none';i.nextElementSibling.style.display='block';}})(this)" />
+        <div class="fallback" style="display:none">
+          <div class="st">★</div>
+          <div class="nm">KALEEM ULLAH</div>
+          <small>Save your photo as <b>kaleem.jpg</b><br>next to index.html</small>
+        </div>
+      </div>
+    </div>
+    <div class="about-body reveal d2">
+      <span class="eyebrow">About Me</span>
+      <h2>The developer behind <span class="gold-text">KKI STARS</span></h2>
+      <p>I'm Kaleem Ullah — a web designer &amp; front-end developer obsessed with one thing: building websites that look world-class and actually convert. From custom-coded sites to WordPress and high-converting landing pages, I turn ideas into fast, elegant, results-driven brands.</p>
+      <p>Every project is treated like a flagship build — clean code, premium design, and clear communication from first message to final launch.</p>
+      <div class="about-points">
+        <span>3+ years building websites</span>
+        <span>100% client-focused process</span>
+        <span>Pixel-perfect, responsive code</span>
+        <span>Fast delivery &amp; ongoing support</span>
+      </div>
+      <div class="sig">Kaleem Ullah<small>Founder &amp; Lead Developer</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stat stat-div"><b data-count="120" data-suffix="+">0</b><small>Projects Delivered</small></div>
+      <div class="stat stat-div"><b data-count="98" data-suffix="%">0</b><small>Client Satisfaction</small></div>
+      <div class="stat stat-div"><b data-count="5" data-suffix=".0">0</b><small>Average Rating</small></div>
+      <div class="stat"><b data-count="40" data-suffix="+">0</b><small>Countries Served</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section class="block" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Selected Work</span>
+      <h2>A portfolio built to <span class="gold-text">earn trust</span></h2>
+      <p>A blend of live client builds and signature concept projects — each one a statement in luxury, speed and conversion.</p>
+    </div>
+    <!-- FEATURED REAL CASE STUDY -->
+    <div class="case reveal" data-cursor>
+      <span class="case-badge">★ Live Client Project</span>
+      <div class="browser">
+        <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">kumorahollyclick.github.io/kumora-holly-click</span></div>
+        <div class="browser-frame">
+          <span class="livedot"><b></b> Live</span>
+          <iframe src="https://kumorahollyclick.github.io/kumora-holly-click/" title="Kumora Holly Click — live preview" loading="lazy" scrolling="no"></iframe>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="cat">Premium Affiliate Brand · Multi-Page Website</div>
+        <h3>Kumora Holly Click</h3>
+        <p class="intro">A refined, minimalist brand for smart home &amp; kitchen gadgets — a fully custom, multi-page affiliate website engineered to look premium, build trust, and convert Amazon shoppers into buyers.</p>
+        <div class="cs-grid">
+          <div class="cs-block"><small>My Role</small><p>End-to-end Designer &amp; Developer — UI/UX, custom front-end code, SEO &amp; deployment.</p></div>
+          <div class="cs-block"><small>The Problem</small><p>Most affiliate sites look cheap and untrustworthy, killing click-through and conversions.</p></div>
+          <div class="cs-block"><small>The Solution</small><p>A clean, editorial design system with curated collections and honest reviews that earn credibility.</p></div>
+          <div class="cs-block"><small>The Result</small><p>A fast, SEO-optimized 5-page brand with social funnels — built to convert premium traffic.</p></div>
+        </div>
+        <div class="cs-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span><span>SEO</span><span>GitHub Pages</span></div>
+        <div class="cs-cta">
+          <a href="https://kumorahollyclick.github.io/kumora-holly-click/" target="_blank" rel="noopener" class="btn btn-gold" data-cursor>View Live Site <span class="arr">↗</span></a>
+          <a href="#fiverr" class="btn btn-ghost" data-cursor>Want Something Like This?</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-label">Concept &amp; Signature Builds</div>
+    <div class="folio-grid">
+
+      <div class="folio reveal d1" data-cursor>
+        <span class="tag-demo">Concept</span>
+        <div class="thumb">
+          <svg class="mock" viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice">
+            <rect width="640" height="400" fill="#141414"/>
+            <rect x="0" y="0" width="640" height="56" fill="#1b1b1b"/>
+            <circle cx="34" cy="28" r="14" fill="none" stroke="#C9A24B"/><text x="58" y="34" fill="#F4F1EA" font-family="Cormorant Garamond" font-size="20">AURELIA</text>
+            <text x="540" y="34" fill="#C9A24B" font-size="13" font-family="Inter">SHOP ↗</text>
+            <text x="50" y="180" fill="#F4F1EA" font-family="Cormorant Garamond" font-size="56">Timeless</text>
+            <text x="50" y="240" fill="#C9A24B" font-family="Cormorant Garamond" font-size="56" font-style="italic">Elegance.</text>
+            <rect x="50" y="270" width="150" height="42" rx="21" fill="#C9A24B"/><text x="92" y="297" fill="#1a1407" font-size="14" font-family="Inter">Discover</text>
+            <rect x="400" y="120" width="190" height="220" rx="12" fill="#1f1f1f" stroke="#2a2a2a"/>
+            <circle cx="495" cy="200" r="50" fill="none" stroke="#C9A24B" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="meta">
+          <div><div class="cat">Luxury E-commerce</div><h3>Aurelia Boutique</h3></div>
+          <div class="view"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
+        </div>
+      </div>
+
+      <div class="folio reveal d2" data-cursor>
+        <span class="tag-demo">Concept</span>
+        <div class="thumb">
+          <svg class="mock" viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice">
+            <rect width="640" height="400" fill="#101010"/>
+            <rect x="40" y="40" width="560" height="64" rx="10" fill="#1a1a1a"/>
+            <text x="64" y="80" fill="#C9A24B" font-family="Cormorant Garamond" font-size="24">NOIR Studio</text>
+            <rect x="40" y="130" width="350" height="230" rx="12" fill="#161616" stroke="#262626"/>
+            <text x="64" y="220" fill="#F4F1EA" font-family="Cormorant Garamond" font-size="40">Design</text>
+            <text x="64" y="262" fill="#F4F1EA" font-family="Cormorant Garamond" font-size="40">that speaks.</text>
+            <rect x="410" y="130" width="190" height="110" rx="12" fill="#1f1f1f"/>
+            <rect x="410" y="250" width="190" height="110" rx="12" fill="#C9A24B" opacity="0.18"/>
+          </svg>
+        </div>
+        <div class="meta">
+          <div><div class="cat">Agency Website</div><h3>Noir Creative Studio</h3></div>
+          <div class="view"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
+        </div>
+      </div>
+
+      <div class="folio reveal d1" data-cursor>
+        <span class="tag-demo">Concept</span>
+        <div class="thumb">
+          <svg class="mock" viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#161616"/><stop offset="1" stop-color="#0d0d0d"/></linearGradient></defs>
+            <rect width="640" height="400" fill="#141414"/>
+            <rect x="0" y="0" width="640" height="400" fill="url(#g1)"/>
+            <text x="50" y="130" fill="#C9A24B" font-size="13" font-family="Inter" letter-spacing="3">SAAS · FINTECH</text>
+            <text x="50" y="190" fill="#F4F1EA" font-family="Cormorant Garamond" font-size="48">Banking,</text>
+            <text x="50" y="240" fill="#F4F1EA" font-family="Cormorant Garamond" font-size="48" font-style="italic">refined.</text>
+            <rect x="380" y="90" width="210" height="240" rx="16" fill="#1c1c1c" stroke="#2a2a2a"/>
+            <rect x="404" y="120" width="160" height="14" rx="7" fill="#C9A24B" opacity="0.6"/>
+            <rect x="404" y="150" width="120" height="10" rx="5" fill="#333"/>
+            <rect x="404" y="200" width="160" height="46" rx="10" fill="#C9A24B"/>
+          </svg>
+        </div>
+        <div class="meta">
+          <div><div class="cat">SaaS Landing Page</div><h3>Vault Fintech</h3></div>
+          <div class="view"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="block" id="process" style="background:rgba(18,18,18,.35);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">How We Work</span>
+      <h2>A process built on <span class="gold-text">precision</span></h2>
+      <p>Clear, calm and collaborative — from first message to final launch, you always know exactly where things stand.</p>
+    </div>
+    <div class="process reveal d1">
+      <div class="step"><div class="pn">01</div><h3>Discovery</h3><p>We define your goals, audience and brand voice so every decision has a purpose.</p></div>
+      <div class="step"><div class="pn">02</div><h3>Design</h3><p>A premium, on-brand layout crafted around conversion and visual hierarchy.</p></div>
+      <div class="step"><div class="pn">03</div><h3>Development</h3><p>Clean, fast, responsive code with smooth animations and SEO baked in.</p></div>
+      <div class="step"><div class="pn">04</div><h3>Launch &amp; Support</h3><p>Polished delivery, testing across devices, and ongoing support you can rely on.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="block" id="skills">
+  <div class="wrap skills-wrap">
+    <div class="reveal">
+      <span class="eyebrow">Capabilities</span>
+      <h2 style="font-size:clamp(34px,4.5vw,52px);margin:18px 0 26px">Skills that turn ideas into <span class="gold-text">flawless builds</span></h2>
+      <p style="color:var(--muted);font-weight:300;margin-bottom:10px">A modern stack and an obsessive eye for detail — the combination behind every site that loads fast and converts well.</p>
+      <div class="tech-cloud">
+        <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span><span class="chip">React</span><span class="chip">WordPress</span><span class="chip">Elementor</span><span class="chip">Tailwind</span><span class="chip">GSAP</span><span class="chip">Figma</span><span class="chip">SEO</span><span class="chip">Responsive</span><span class="chip">CRO</span>
+      </div>
+    </div>
+    <div class="reveal d2">
+      <div class="skill"><div class="skill-top"><span>UI / UX &amp; Visual Design</span><span>96%</span></div><div class="skill-bar"><i data-bar="96"></i></div></div>
+      <div class="skill"><div class="skill-top"><span>Front-End Development</span><span>94%</span></div><div class="skill-bar"><i data-bar="94"></i></div></div>
+      <div class="skill"><div class="skill-top"><span>WordPress &amp; CMS</span><span>92%</span></div><div class="skill-bar"><i data-bar="92"></i></div></div>
+      <div class="skill"><div class="skill-top"><span>Conversion Optimization</span><span>90%</span></div><div class="skill-bar"><i data-bar="90"></i></div></div>
+      <div class="skill"><div class="skill-top"><span>Performance &amp; SEO</span><span>95%</span></div><div class="skill-bar"><i data-bar="95"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="block" id="testimonials" style="background:rgba(18,18,18,.35);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Client Words</span>
+      <h2>Reviews that <span class="gold-text">speak for themselves</span></h2>
+      <p>The reputation behind every five-star delivery — real outcomes, real satisfaction.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi reveal d1">
+        <div class="q">&ldquo;</div><div class="stars">★★★★★</div>
+        <p>Absolutely exceeded expectations. The website looks like a million-dollar brand and our leads doubled in the first month. Worth every cent.</p>
+        <div class="who"><div class="av">J</div><div><b>James Whitmore</b><small>Founder, Aurelia Boutique</small></div></div>
+      </div>
+      <div class="testi reveal d2">
+        <div class="q">&ldquo;</div><div class="stars">★★★★★</div>
+        <p>Fast, professional and incredibly talented. Communication was flawless and the final design felt truly premium. Already booked the next project.</p>
+        <div class="who"><div class="av">S</div><div><b>Sofia Marchetti</b><small>Director, Noir Studio</small></div></div>
+      </div>
+      <div class="testi reveal d3">
+        <div class="q">&ldquo;</div><div class="stars">★★★★★</div>
+        <p>Our landing page conversion jumped massively after the rebuild. Clean code, beautiful design, on-time delivery. A true 5-star experience.</p>
+        <div class="who"><div class="av">D</div><div><b>Daniel Cole</b><small>CMO, Vault Fintech</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-band" id="fiverr">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <span class="eyebrow center" style="display:flex;justify-content:center">Let's Build Something Iconic</span>
+      <h2>Your brand deserves a website that <span class="gold-text">commands respect.</span></h2>
+      <p>Let's create a premium, high-converting site that makes high-paying clients say yes. Start your project today.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-gold" data-cta="fiverr" data-cursor>Hire Me on Fiverr <span class="arr">↗</span></a>
+        <a href="#contact" class="btn btn-ghost" data-cursor>Send a Message</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="block" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Let's start your <span class="gold-text">project</span></h2>
+      <p>Tell me about your vision and I'll reply within 24 hours with how we can bring it to life.</p>
+      <div class="ci-item" data-contact-row="email">
+        <div class="ico"><svg fill="none" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg></div>
+        <div><small>Email</small><b data-contact="email">Use the form →</b></div>
+      </div>
+      <div class="ci-item" data-contact-row="whatsapp">
+        <div class="ico"><svg fill="none" stroke-width="1.6" viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></div>
+        <div><small>WhatsApp</small><b data-contact="whatsapp">Available on request</b></div>
+      </div>
+      <div class="ci-item">
+        <div class="ico"><svg fill="none" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg></div>
+        <div><small>Available</small><b>Worldwide · Remote</b></div>
+      </div>
+      <a href="#fiverr" class="btn btn-gold" data-cta="fiverr" data-cursor style="margin-top:28px">Hire Me on Fiverr <span class="arr">↗</span></a>
+    </div>
+    <form id="contactForm" novalidate>
+      <div class="field"><label for="name">Your Name</label><input id="name" name="name" type="text" placeholder="John Carter" required /></div>
+      <div class="field"><label for="email">Email Address</label><input id="email" name="email" type="email" placeholder="you@brand.com" required /></div>
+      <div class="field">
+        <label for="service">Service Needed</label>
+        <select id="service" name="service">
+          <option>Custom Code Website</option>
+          <option>Business / Portfolio Site</option>
+          <option>Landing Page / Funnel</option>
+          <option>WordPress Website</option>
+          <option>Other / Not sure yet</option>
+        </select>
+      </div>
+      <div class="field"><label for="message">Project Details</label><textarea id="message" name="message" placeholder="Tell me about your brand, goals and timeline..." required></textarea></div>
+      <button type="submit" class="btn btn-gold" data-cursor>Send Message <span class="arr">↗</span></button>
+      <div class="form-msg" id="formMsg"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#home" class="brand"><span class="mark">★</span><b>KKI</b>&nbsp;<span>STARS</span></a>
+        <p><strong style="color:var(--gold);font-weight:600">Premium Web Studio.</strong> Luxury web design &amp; development — websites engineered to impress high-paying clients and convert.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Navigate</h4>
+          <a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#testimonials">Reviews</a>
+        </div>
+        <div class="foot-col">
+          <h4>Services</h4>
+          <a href="#services">Custom Code</a><a href="#services">WordPress</a><a href="#services">Landing Pages</a><a href="#services">Portfolio Sites</a>
+        </div>
+        <div class="foot-col">
+          <h4>Connect</h4>
+          <a href="#contact" data-cta="fiverr-text">Fiverr ↗</a><a href="#contact">Email</a><a href="#contact">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <small>© <span id="year"></span> KKI STARS. Crafted with precision.</small>
+      <div class="socials">
+        <a href="#" data-cta="fiverr-icon" aria-label="Fiverr"><svg fill="none" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 9h7v9H8v-6H4z"/><circle cx="14" cy="6" r="2"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg fill="none" stroke-width="1.6" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg fill="none" stroke-width="1.6" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v0M11 17v-4a2 2 0 014 0v4"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="totop" id="totop" aria-label="Back to top"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+
+<script>
+/* ==================================================================
+   ★ KKI STARS — SINGLE CONTROL PANEL ★
+   --------------------------------------------------------------
+   Sirf neeche 3 cheezein bharo, poori website khud update ho jayegi.
+   (Just fill these 3 values — the whole site updates automatically.)
+
+   • fiverr   : apna Fiverr gig/profile ka pura link. Khali "" rahega
+                to har Fiverr button "Coming Soon" dikhayega.
+   • email    : apna email. Khali "" = contact form WhatsApp/placeholder use karega.
+   • whatsapp : country code + number, sirf digits (koi +, space, - nahi).
+                Misal: Pakistan 0300-1234567  ->  "923001234567"
+   ================================================================== */
+const CONFIG = {
+  fiverr:   "https://www.fiverr.com/s/kL9LpAb",   // ✅ your live Fiverr profile
+  email:    "",   // e.g. "hello@kkistars.com"  (khali = contact form use karega)
+  whatsapp: ""    // e.g. "923001234567"        (khali = "Available on request")
+};
+/* ================================================================== */
+
+document.getElementById('year').textContent=new Date().getFullYear();
+
+/* ===== APPLY CONFIG (future-proof: edit only CONFIG above) ===== */
+function applyConfig(){
+  const hasF=!!CONFIG.fiverr.trim();
+  document.querySelectorAll('[data-cta="fiverr"]').forEach(el=>{
+    if(!el.dataset.orig) el.dataset.orig=el.innerHTML;
+    if(hasF){
+      el.href=CONFIG.fiverr; el.target="_blank"; el.rel="noopener";
+      el.classList.remove('soon'); el.removeAttribute('aria-disabled'); el.innerHTML=el.dataset.orig;
+    }else{
+      el.removeAttribute('target'); el.setAttribute('aria-disabled','true');
+      el.classList.add('soon'); el.href='#contact';
+      el.innerHTML='<span class="soon-dot"></span> Fiverr — Coming Soon';
+    }
+  });
+  document.querySelectorAll('[data-cta="fiverr-text"]').forEach(el=>{
+    if(hasF){el.href=CONFIG.fiverr;el.target="_blank";el.rel="noopener";}
+    else{el.href='#contact';el.textContent='Fiverr — Coming Soon';}
+  });
+  document.querySelectorAll('[data-cta="fiverr-icon"]').forEach(el=>{
+    if(hasF){el.href=CONFIG.fiverr;el.target="_blank";el.rel="noopener";el.style.opacity='';el.title='Fiverr';}
+    else{el.href='#contact';el.style.opacity='.45';el.title='Fiverr — Coming Soon';}
+  });
+  document.querySelectorAll('[data-contact="email"]').forEach(el=>{
+    if(CONFIG.email.trim()){el.textContent=CONFIG.email;linkRow(el.closest('.ci-item'),'mailto:'+CONFIG.email,false);}
+    else{el.textContent='Use the form →';}
+  });
+  document.querySelectorAll('[data-contact="whatsapp"]').forEach(el=>{
+    if(CONFIG.whatsapp.trim()){const num=CONFIG.whatsapp.replace(/[^\d]/g,'');el.textContent='+'+num;linkRow(el.closest('.ci-item'),'https://wa.me/'+num,true);}
+    else{el.textContent='Available on request';}
+  });
+}
+function linkRow(row,url,blank){if(!row)return;row.style.cursor='pointer';row.addEventListener('click',()=>window.open(url,blank?'_blank':'_self'));}
+applyConfig();
+
+/* ===== header scroll + progress + totop ===== */
+const header=document.getElementById('header'),progress=document.getElementById('progress'),totop=document.getElementById('totop');
+function onScroll(){
+  const y=window.scrollY;
+  header.classList.toggle('scrolled',y>40);
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  progress.style.width=(h>0?(y/h*100):0)+'%';
+  totop.classList.toggle('show',y>700);
+}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+totop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ===== mobile menu ===== */
+const burger=document.getElementById('burger'),mm=document.getElementById('mobileMenu');
+burger.addEventListener('click',()=>{mm.classList.toggle('open');document.body.classList.toggle('no-scroll')});
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mm.classList.remove('open');document.body.classList.remove('no-scroll')}));
+
+/* ===== hero intro ===== */
+window.addEventListener('load',()=>{document.querySelector('.hero').classList.add('in')});
+setTimeout(()=>{const h=document.querySelector('.hero');if(h)h.classList.add('in');},600);
+
+/* ===== reveal on scroll ===== */
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+},{threshold:.14,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ===== animated bars ===== */
+const barIO=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){const el=e.target;el.style.width=el.dataset.bar+'%';barIO.unobserve(el)}})
+},{threshold:.4});
+document.querySelectorAll('[data-bar]').forEach(b=>barIO.observe(b));
+
+/* ===== count up ===== */
+const countIO=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const el=e.target,target=parseFloat(el.dataset.count),suffix=el.dataset.suffix||'';
+    const isFloat=String(target).includes('.')||suffix.includes('.');
+    let dur=1400,start=performance.now();
+    function tick(now){
+      const p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3),val=target*ease;
+      el.textContent=(isFloat?val.toFixed(1):Math.floor(val))+suffix;
+      if(p<1)requestAnimationFrame(tick);else el.textContent=(isFloat?target.toFixed(1):target)+suffix;
+    }
+    requestAnimationFrame(tick);countIO.unobserve(el);
+  })
+},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(c=>countIO.observe(c));
+
+/* ===== service card glow follow ===== */
+document.querySelectorAll('.svc').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    card.style.setProperty('--mx',(e.clientX-r.left)+'px');
+    card.style.setProperty('--my',(e.clientY-r.top)+'px');
+  });
+});
+
+/* ===== custom cursor ===== */
+const dot=document.getElementById('cdot'),ring=document.getElementById('cring');
+let rx=0,ry=0,dx=0,dy=0;
+if(window.matchMedia('(hover:hover)').matches){
+  window.addEventListener('mousemove',e=>{dx=e.clientX;dy=e.clientY;dot.style.transform=`translate(${dx}px,${dy}px) translate(-50%,-50%)`});
+  (function ringLoop(){rx+=(dx-rx)*.18;ry+=(dy-ry)*.18;ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`;requestAnimationFrame(ringLoop)})();
+  document.querySelectorAll('a,button,[data-cursor],.folio,.svc,input,textarea,select').forEach(el=>{
+    el.addEventListener('mouseenter',()=>ring.classList.add('hover'));
+    el.addEventListener('mouseleave',()=>ring.classList.remove('hover'));
+  });
+}
+
+/* ===== contact form ===== */
+const form=document.getElementById('contactForm'),msg=document.getElementById('formMsg');
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const n=form.name.value.trim(),em=form.email.value.trim();
+  if(!n||!em||!form.message.value.trim()){msg.style.color='#e0894b';msg.textContent='Please fill in all fields.';return}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){msg.style.color='#e0894b';msg.textContent='Please enter a valid email.';return}
+  const subject='New Project Inquiry — '+form.service.value;
+  const plain='Name: '+n+'\nEmail: '+em+'\nService: '+form.service.value+'\n\n'+form.message.value;
+  msg.style.color='var(--gold)';
+  if(CONFIG.email.trim()){
+    window.location.href='mailto:'+CONFIG.email+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(plain);
+    msg.textContent='✓ Thanks, '+n+'! Opening your email app...';
+  }else if(CONFIG.whatsapp.trim()){
+    const num=CONFIG.whatsapp.replace(/[^\d]/g,'');
+    window.open('https://wa.me/'+num+'?text='+encodeURIComponent(subject+'\n\n'+plain),'_blank');
+    msg.textContent='✓ Thanks, '+n+'! Opening WhatsApp...';
+  }else{
+    msg.textContent='✓ Thanks, '+n+'! Your message is ready. (Add your email or WhatsApp in CONFIG to receive inquiries directly.)';
+  }
+  form.reset();
+});
+</script>
+</body>
+</html>
